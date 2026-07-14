@@ -1,5 +1,8 @@
 import { useState } from "react";
 import { LayoutDashboard, CheckSquare, Users, Settings, Shield, Wifi, Activity, FileText, Lock, Upload } from "lucide-react";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
+
 
 const INITIAL_TASKS = [
   { id: "t1", step: 1, title: "Create Confluence Testing Tracker", assignee: "R. Holloway", dueDate: "Jun 14", status: "completed" },
@@ -48,14 +51,14 @@ export default function App() {
       {/* Sidebar Navigation */}
       <aside className="sidebar">
         <div className="nav-group">
-          <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "24px", color: "white" }}>
-            <div style={{ width: "36px", height: "36px", borderRadius: "12px", backgroundColor: "#00875A", display: "flex", alignItems: "center", justifyContent: "center" }}>
-              <Shield size={18} />
-            </div>
-            <div>
-              <h2 style={{ fontSize: "14px", margin: 0, fontWeight: 800 }}>SecureOps</h2>
-              <span style={{ fontSize: "10px", color: "#5CA98B", fontWeight: "bold", letterSpacing: "1px" }}>BANKING SUITE</span>
-            </div>
+              <div style={{ marginBottom: "24px" }}>
+                <LazyLoadImage
+                 alt="Lloyds Bank official logo"
+                  effect="blur"
+                 src="https://upload.wikimedia.org/wikipedia/en/thumb/8/87/Lloyds_Bank_logo.svg/1200px-Lloyds_Bank_logo.svg.png"
+width="150"
+                    height="50"
+            />
           </div>
 
           <button className="nav-button"><LayoutDashboard size={16} /> Dashboard</button>
