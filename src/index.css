@@ -1,0 +1,161 @@
+/* Custom Reset & Elegant Modern Variables */
+:root {
+  --bg-main: #F3F5F3;
+  --bg-sidebar: #013525;
+  --bg-sidebar-active: #014732;
+  --text-dark: #0E1E11;
+  --brand-green: #006A4E;
+  --brand-light: #E2ECE6;
+  --border-color: #EAEAEA;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-main);
+  color: var(--text-dark);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Base Layout Containers */
+.app-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Sidebar with Round Tabs */
+.sidebar {
+  width: 260px;
+  background-color: var(--bg-sidebar);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.nav-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.nav-button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  border-radius: 50px; /* Perfect round pills */
+  border: none;
+  background: none;
+  color: #7CB09A;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.nav-button.active {
+  background-color: var(--bg-sidebar-active);
+  color: white;
+}
+
+/* Main Dashboard Window Layout */
+.main-window {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+.main-header {
+  height: 64px;
+  background: white;
+  border-b: 1px solid var(--border-color);
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Gorgeous Floating Card Layouts */
+.dashboard-grid {
+  flex: 1;
+  display: flex;
+  gap: 24px;
+  padding: 24px;
+  overflow: hidden;
+}
+
+.workspace-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow-y: auto;
+}
+
+.right-panel {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.floating-card {
+  background: white;
+  border-radius: 20px; /* Sectioned off, smooth round shapes */
+  border: 1px solid var(--border-color);
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+}
+
+/* Checklist Rows */
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.task-card {
+  background: white;
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Metrics and Custom Elements */
+.metrics-pill-grid {
+  display: grid;
+  grid-cols: 3;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  width: 100%;
+  margin-top: 16px;
+}
+
+.stat-pill {
+  border-radius: 14px;
+  padding: 12px;
+  text-align: center;
+}
+
+.circle-progress {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  border: 8px solid #F0F2F0;
+  border-top-color: var(--brand-green);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 12px auto;
+}
